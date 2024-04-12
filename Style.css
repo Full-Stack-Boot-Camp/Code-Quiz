@@ -1,0 +1,120 @@
+/* Full Webpage Styling */
+* {
+    font-family: Roboto, sans-serif;
+    padding: 5px;
+    margin: 0;
+}
+/* Webpage Title Header Styling */
+h1 {
+    font-weight: lighter;
+    background-color: black;
+    color:white;
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 20px;
+}
+/* Main Page Introduction Styling */
+h2 {
+    font-family: Arima Madurai, cursive;
+    font-weight: 300;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.Main-Start-Page {
+    text-align: center;
+}
+.Start-Quiz-Button {
+    outline: black;
+    background-color: white;
+    box-sizing: border-box;
+    font-size: small;
+    overflow: hidden;
+    border-radius: 10%;
+    border-width: 1px;
+    padding: 10px;
+    margin-top: 20px;
+}
+/* Question and Leaderboard Styling */
+h3 {
+    font-family: Arima Madurai, cursive;
+    font-weight: 300;
+}
+.Answer-Response {
+    text-align: center;
+    font-size: larger;
+}
+/* Timer Countdown Styling */
+.Timer {
+    text-align: right;
+    margin-right: 20px;
+}
+/* Finished Results Elements Styling */
+.Finished-Quiz {
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.Quiz-Score-Finished {
+    text-align: center;
+}
+.Finished-Return-Home {
+    text-align: right;
+}
+.Return-Home-Button {
+    background-color: white;
+    outline: black;
+    border-radius: 8px;
+    border-width: 1px;
+    padding: 10px;
+    font-size: small;
+    margin-top: 50px;
+}
+/* Failed Results Elements Styling */
+.Failed-Quiz {
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.Quiz-Score-Failed {
+    text-align: center;
+}
+.Failed-Message {
+    text-align: center;
+}
+.Failed-Return-Home {
+    text-align: right;
+}
+.Return-Home-Button-2 {
+    background-color: white;
+    outline: black;
+    border-radius: 8px;
+    margin-top: 50px;
+    border-width: 1px;
+    padding: 10px;
+    font-size: small;
+}
+/* Leaderboard and High Scores Styling */
+.Leaderboard-Instructions {
+    text-align: center;
+    margin-top: 20px;
+}
+.Leaderboard-Initials {
+    text-align: center;
+}
+.Leaderboard-Section {
+    text-align: center;
+}
+.Leaderboard {
+    text-decoration: underline;
+}
+.High-Scores {
+
+}
+.Clear-Scores-Button {
+    outline: black;
+    background-color: white;
+    font-size: small;
+    border-radius: 8%;
+    border-width: 1px;
+    padding: 15px;
+}
