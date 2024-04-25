@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Quiz Game!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500;900&family=Roboto:wght@100&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./Assets/CSS/Style.css">
+    </head>
+    <body>
+        <div class="Page-Container">
+            <header>
+                <h1>Coding Quiz</h1>
+            </header>
+            <div class="Timer">
+            
+            </div>
+
+            <div class="Main-Start-Page">
+                <h2>A test of your basic coding knowledge</h2>
+                <p class="Game-Intro">This coding quiz follows a multiple-choice questions format. You will be given 120 seconds to answer all of the questions. For every question answered incorrectly, 15 seconds will be deducted from the timer. The quiz will end once all of the questions have been answered or the timer runs out. You will then be asked to enter your initials, which will be associated to your score that gets recorded. The top 10 scores will be recorded in the Leaderboard.</p>
+                <p class="Click-Start">Click START to begin.</p>
+                <button type="button" class="Start-Quiz-Button">START</button>
+            </div>
+
+            <div class="Questions-Page">
+                <h3 class="Question"></h3>
+                <ul class="Answer-Choices"></ul>
+                <p class="Answer-Response"></p>
+            </div>
+
+            <div class="Results-Finished" style="display: none">
+                <h3 class="Finished-Quiz">Congratulations on finishing the quiz!</h3>
+                <p class="Quiz-Score-Finished"></p>
+                <br>
+                <p class="Leaderboard-Instructions">To add your score to the Leaderboard, input your initials below:</p>
+                <div class="Leaderboard-Initials" style="display: none">
+                    <label for="Initials-Input"></label>
+                    <input type="text" placeholder="Enter Your Initials" id="Initials-Input">
+                    <button class="Submit-Score-Button">Submit Score</button>
+                </div>
+                <div class="Finished-Return-Home">
+                <button class="Return-Home-Button">Return to Main Page</button>
+                </div>
+            </div>
+
+            <div class="Results-Failed" style="display: none">
+                <h3 class="Failed-Quiz">Better luck next time!</h3>
+                <p class="Quiz-Score-Failed"></p>
+                <p class="Failed-Message">Please take some time to study and try again later!</p>
+                <div class="Failed-Return-Home">
+                    <button class="Return-Home-Button-2">Return to Main Page</button>
+                </div>
+            </div>
+                
+            <div class="Leaderboard-Section">
+                <h3 class="Leaderboard">Leaderboard</h3>
+                <ol class="High-Scores"></ol>
+                <button class="Clear-Scores-Button">Clear Scores</button>
+            </div>
+        </div>
+
+        <script src="./Assets/Scripts/Script.js"></script>
+    </body>
+</html>
