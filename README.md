@@ -6,7 +6,7 @@
 
 <h3>Test your knowledge about JavaScript with this Code Quiz application!</h3>
 
-[![License Badge](https://img.shields.io/badge/License-MIT-pink?style=flat-square&labelColor=3A3B3C&color=F778A1&link=https%3A%2F%2Fchoosealicense.com%2Flicenses%2Fmit%2F)](https://choosealicense.com/licenses/mit/) [![GitHub Badge](https://img.shields.io/badge/GitHub-emsim11-blue?style=flat-square&logo=GitHub&labelColor=3A3B3C&color=78E1F7&link=https://github.com/emsim11)](https://github.com/emsim11) [![Email Badge](https://img.shields.io/badge/Gmail-Contact_Me-green?style=flat-square&logo=gmail&logoColor=FFFFFF&labelColor=3A3B3C&color=62F1CD)](mailto:emsimone11@gmail.com) [![Deployed URL Badge](https://img.shields.io/badge/Deployed_URL-Code_Quiz-purple?style=flat-square&labelColor=3A3B3C&color=E0ADF7&link=ENTERHERE)](ENTERHERE)
+[![License Badge](https://img.shields.io/badge/License-MIT-pink?style=flat-square&labelColor=3A3B3C&color=F778A1&link=https%3A%2F%2Fchoosealicense.com%2Flicenses%2Fmit%2F)](https://choosealicense.com/licenses/mit/) [![GitHub Badge](https://img.shields.io/badge/GitHub-emsim11-blue?style=flat-square&logo=GitHub&labelColor=3A3B3C&color=78E1F7&link=https://github.com/emsim11)](https://github.com/emsim11) [![Email Badge](https://img.shields.io/badge/Gmail-Contact_Me-green?style=flat-square&logo=gmail&logoColor=FFFFFF&labelColor=3A3B3C&color=62F1CD)](mailto:emsimone11@gmail.com) [![Deployed URL Badge](https://img.shields.io/badge/Deployed_URL-Code_Quiz-purple?style=flat-square&labelColor=3A3B3C&color=E0ADF7&link=https://emsim11.github.io/Code-Quiz/)](https://emsim11.github.io/Code-Quiz/)
 
 <p>
 <a href="#description">Description</a> • 
