@@ -1,4 +1,10 @@
-// 1. Define Variables from Index.HTML
+// Global Variables
+var SecondsLeft = 120; // Initial Time On Clock (In Seconds)
+var IntervalTime = 1000; // Interval Time Set to 1 Second (In Milliseconds)
+var Finish = false;
+var ScoreList = [];
+
+// DOM Element References
 var StartQuiz = document.querySelector(".Start-Quiz-Button"); // Start Quiz Button
 var MainPage = document.querySelector(".Main-Start-Page"); // Main (Start) Page
 var QuestionPage = document.querySelector(".Questions-Page") // Questions Page
@@ -14,68 +20,57 @@ var LeaderboardInitials = document.querySelector(".Leaderboard-Initials"); // Le
 var ClearScores = document.querySelector(".Clear-Scores-Button"); // Clear Leaderboard Scores Button
 var ReturnToMainFinished = document.querySelector(".Return-Home-Button"); // Return to Main Page Button for Finished (In Time) Quiz
 var ReturnToMainFailed = document.querySelector(".Return-Home-Button-2"); // Return to Main Page Button for Failed (Ran Out of Time) Quiz
+var TimerVariable = document.querySelector(".Timer"); // Timer Variable
+var UserScores = document.querySelector(".Submit-Score-Button");
+var LeaderboardList = document.querySelector(".High-Scores");
+var InitialsInput = document.querySelector("#Initials-Input");
 
-//  2. Define Questions, Choices, and Answers
+// Questions, Choices, and Answers Array
 var Questions = [
     {
         QuestionTitle: "Which of the following keywords is used to define a variable in JavaScript?",
         Choices: ['var','let','Both A and B','None of the above'],
         Answer: 'Both A and B',
-    },
-    {
+    }, {
         QuestionTitle: "When an operator's value is NULL, the typeof returned by the unary operator is:",
         Choices: ['Boolean','Undefined','Object','Integer'],
         Answer: 'Object',
-    },
-    {
+    }, {
         QuestionTitle: "Which of the following methods can be used to display data in some form using JavaScript?",
         Choices: ['document.write()','console.log()','window.alert()','All of the above'],
         Answer: 'All of the above',
-    },
-    {
+    }, {
         QuestionTitle: "A very useful tool used during development and debugging for printing content to the debugger is:",
         Choices: ['JavaScript','Terminal/Bash','for loop','console.log'],
         Answer: 'console.log',
-    },
-    {
+    }, {
         QuestionTitle: "Arrays in JavaScript can be used to store:",
         Choices: ['Numbers and Strings','Other Arrays','Booleans','All of the above'],
         Answer: 'All of the above',
-    },
-    {
+    }, {
         QuestionTitle: "Commonly used data types DO NOT include:",
         Choices: ['Strings','Booleans','Alerts','Numbers'],
         Answer: 'Alerts',
-    },
-    {
+    }, {
         QuestionTitle: "What is used to stop an interval timer in JavaScript?",
         Choices: ['clearInterval','clearTimer','intervalOver','None of the above'],
         Answer: 'clearInterval',
-    },
-    {
+    }, {
         QuestionTitle: "How are objects compared when they are checked with the strict equality operator?",
         Choices: ['The contents of the objects are compared','Their references are compared','Both A and B','None of the above'],
         Answer: 'Their references are compared',
-    },
-    {
+    }, {
         QuestionTitle: "Arrays in JavaScript are defined by which of the following statements?",
         Choices: ['It is an ordered list of objects','It is an ordered list of values','It is an ordered list of string','It is an ordered list of functions'],
         Answer: 'It is an ordered list of values',
-    },
-    {
+    }, {
         QuestionTitle: "Which of the following can be used to call a JavaScript Code Snippet?",
         Choices: ['Function/Method','Preprocessor','Triggering Event','RMI'],
         Answer: 'Function/Method',
     },
 ];
 
-// 3. Timer
-//  a. Define Timer Variables
-var TimerVariable = document.querySelector(".Timer"); // Timer Variable
-var SecondsLeft = 120; // Initial Time On Clock (In Seconds)
-var Finish = false;
-var IntervalTime = 1000; // Interval Time Set to 1 Second (In Milliseconds)
-//  b. Function For Start Timer, Display Timer, Stop Timer When Quiz is Finished, Stop Timer When Time Reaches 0, and Countdown Timer
+// Function to Start/Stop, Countdown, and Display Timer
 function StartTimer () {
     var TimerInterval = setInterval(function() {
         TimerVariable.style.display = "block";
@@ -92,7 +87,7 @@ function StartTimer () {
     }, IntervalTime);
 };
 
-// 4. Start Quiz Button Event Listener, Hide Main Page, Display Question Page, Start Timer Countdown, Display First Question in Questions Index
+// Function to Start Quiz and Timer Countdown
 StartQuiz.addEventListener("click", function() {
     MainPage.setAttribute("hidden", true);
     QuestionPage.style.display = "block";
@@ -100,14 +95,16 @@ StartQuiz.addEventListener("click", function() {
     StartTimer();
     NextQuestion(0);
 });
+
 StartQuiz.addEventListener("mouseover", function(event) {
     event.target.style.backgroundColor = "pink";
 });
+
 StartQuiz.addEventListener("mouseleave", function(event) {
     event.target.style.backgroundColor = "white";
 });
 
-// 5. Function For NextQuestion(), Remove Previous Answer Choices From Display, Set Quiz to Finish Once All 10 Questions Are Answered, Set Quiz to Show Next Question and Answer Choices If All Questions Haven't Been Answered Yet
+// Function to Display Next Question or End Quiz After Answering the Current Question
 function NextQuestion(index) {
     while (AnswerChoices.firstChild) {
         AnswerChoices.removeChild(AnswerChoices.firstChild);
@@ -150,14 +147,14 @@ function NextQuestion(index) {
     }
 };
 
-// 6. Calculate Number of Questions That Are Answered Correctly, Function For Calculating Quiz Score, Return UserQuizScore
+// Function to Calculate Quiz Score
 let CorrectAnswers = 0;
 let UserQuizScore = 0;
 function CalculateQuizScore() {
     return CorrectAnswers * 10;
 };
 
-// 7. Function For QuizFinish()
+// Function to Display Quiz Score (Finished Quiz)
 function QuizFinish() {
     QuestionPage.setAttribute = ("hidden",true);
     QuestionTitle.style.display = "none";
@@ -170,7 +167,7 @@ function QuizFinish() {
     console.log("Quiz Score: ", UserQuizScore);
 };
 
-// 8. Function For QuizFail()
+// Function to Display Quiz Score (Failed Quiz)
 function QuizFail() {
     QuestionPage.setAttribute = ("hidden",true);
     QuestionTitle.style.display = "none";
@@ -184,12 +181,7 @@ function QuizFail() {
     console.log("Quiz Score: ", UserQuizScore);
 };
 
-// 9. Leaderboard Functions
-var UserScores = document.querySelector(".Submit-Score-Button");
-var LeaderboardList = document.querySelector(".High-Scores");
-var InitialsInput = document.querySelector("#Initials-Input");
-var ScoreList = [];
-// a. Save Scores, Sort Scores Highest to Lowest, Limit Leaderboard To Top 10 Scores, Remove Lowest Score, Use Local Storage For Leaderboard List
+// Function to Save Quiz Score
 function SaveScore () {
     var UserScore = {
         Initials: InitialsInput.value.trim(),
@@ -207,6 +199,7 @@ function SaveScore () {
     localStorage.setItem("UserScore", JSON.stringify(ScoreList));
 };
 
+// Function to Display Leaderboard
 function RenderScore() {
     var LeaderboardScore = JSON.parse(localStorage.getItem("UserScore"));
     while (LeaderboardList.firstChild) {
@@ -219,6 +212,7 @@ function RenderScore() {
     }
 };
 
+// Function to Save Quiz Scores in Leaderboard to Local Storage
 function Initiate() {
     var StoredScores = JSON.parse(localStorage.getItem("UserScore"));
     if (StoredScores !== null) {
@@ -226,6 +220,7 @@ function Initiate() {
     }
     RenderScore();
 }
+
 Initiate();
 
 UserScores.addEventListener("click",function(event) {
@@ -235,28 +230,32 @@ UserScores.addEventListener("click",function(event) {
     SaveScore();
     RenderScore();
 });
+
 UserScores.addEventListener("mouseover",function(event) {
     event.target.style.backgroundColor = "pink";
 });
+
 UserScores.addEventListener("mouseleave", function(event) {
     event.target.style.backgroundColor = "white";
 });
 
-// 10. Clear Scores Button (Event Listeners For Click, Mouseover, Mouseleave)
+// Function to Clear High Scores on Leaaderboard
 ClearScores.addEventListener("click",function(event) {
     event.stopPropagation;
     localStorage.removeItem("UserScore");
     ScoreList = [];
     RenderScore();
 });
+
 ClearScores.addEventListener("mouseover",function(event) {
     event.target.style.backgroundColor = "pink";
 });
+
 ClearScores.addEventListener("mouseleave", function(event) {
     event.target.style.backgroundColor = "white";
 });
 
-// 11. Function For Finished Quiz Return To Main Page Button, Event Listener For Click, Mouseover, Mouseleave
+// Function to Return To Main Page (Finished Quiz)
 ReturnToMainFinished.addEventListener("click", ReturnToMain);
 ReturnToMainFinished.addEventListener("mouseover",function(event) {
     event.target.style.backgroundColor = "pink";
@@ -269,7 +268,7 @@ function ReturnToMain() {
     window.location.reload();
 };
 
-// 12. Function For Failed Quiz Return To Main Page Button, Event Listener For Click, Mouseover, Mouseleave
+// Function to Return to Main Page (Failed Quiz)
 ReturnToMainFailed.addEventListener("click", ReturnToMain);
 ReturnToMainFailed.addEventListener("mouseover",function(event) {
     event.target.style.backgroundColor = "pink";
