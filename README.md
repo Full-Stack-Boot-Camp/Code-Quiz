@@ -17,6 +17,16 @@
 
 </div>
 
+<div align="center">
+
+<img src="./Assets/Images/Code-Quiz-iPhone-Demo.gif" alt="A walkthrough demonstration GIF of the Code Quiz application that shows the main page, a question page, the finished page with a feature to insert your initials, and the Leadboard page." width="500"></a>
+
+</div>
+
+## Visuals
+
+This is a gif video demonstration of my Coding Quiz. The first visual displays the main page that appears when the web application URL is deployed. The next visual shows how a question page appears within the quiz. The third visual displays the finished page, which allows the quiz-taker to input their initials and save their score to the Leaderboard. Please note that if you run out of time BEFORE ALL QUESTIONS ARE ANSWERED, a different page will display that says "Better luck next time!" You will NOT be able to enter your initials and submit your score to the Leaderboard if time runs out before all questions are answered.
+
 ## Description
 
 In this Challenge, I implement what I have learned in class about Web APIs in order to create a timed coding quiz with multiple-choice questions. Given that it is likely I will be asked in the future to complete a coding assessment - perhaps as part of an interview process - it is important to become familiar with these tests. I have utilized JavaScript and Web APIs to create the interactive features of the quiz, including the questions and answers, the timer, and the high scores. I have utilized HTML and CSS to create a clean, polished, and responsive user interface. I have based my multiple-choice questions on JavaScript information I have learned in the boot camp.
@@ -66,12 +76,6 @@ THEN I can save my initials and my score
 Use this Coding Quiz as a way to asses your basic knowledge about JavaScript! It has a user-friendly display, and informs you whether or not you answered the question correctly by displaying either "✔️" or "𝑥" below the answer choices. To begin the game, click the "START" button. Advance through the quiz by selecting the answer choice which you believe to be the correct one. Once all ten questions have been answered, please feel free to add your score to the Leaderboard by inputting your initials and clicking the "Submit Score" button! Please **note** that the option to enter your initials to submit your score to the leaderboard will only be available **if you complete all ten questions before time runs out!**
 
 [Back to Top](#code-quiz)
-
-### Visuals
-
-Below you will find a gif video that I have created, which displays my Coding Quiz. The first visual displays the main page that appears when the web application URL is deployed. The next visual shows how a question page appears within the quiz. The third visual displays the finished page, which allows the quiz-taker to input their initials and save their score to the Leaderboard. Please note that if you run out of time BEFORE ALL QUESTIONS ARE ANSWERED, a different page will display that says "Better luck next time!" You will NOT be able to enter your initials and submit your score to the Leaderboard if time runs out before all questions are answered.
-
-![A walkthrough demonstration GIF of the Code Quiz application that shows the main page, a question page, the finished page with a feature to insert your initials, and the Leadboard page.](./Assets/Images/Code-Quiz-iPhone-Demo.gif)
 
 ## Support
 
