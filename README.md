@@ -23,10 +23,6 @@
 
 </div>
 
-## Visuals
-
-This is a gif video demonstration of my Coding Quiz. The first visual displays the main page that appears when the web application URL is deployed. The next visual shows how a question page appears within the quiz. The third visual displays the finished page, which allows the quiz-taker to input their initials and save their score to the Leaderboard. Please note that if you run out of time BEFORE ALL QUESTIONS ARE ANSWERED, a different page will display that says "Better luck next time!" You will NOT be able to enter your initials and submit your score to the Leaderboard if time runs out before all questions are answered.
-
 ## Description
 
 In this Challenge, I implement what I have learned in class about Web APIs in order to create a timed coding quiz with multiple-choice questions. Given that it is likely I will be asked in the future to complete a coding assessment - perhaps as part of an interview process - it is important to become familiar with these tests. I have utilized JavaScript and Web APIs to create the interactive features of the quiz, including the questions and answers, the timer, and the high scores. I have utilized HTML and CSS to create a clean, polished, and responsive user interface. I have based my multiple-choice questions on JavaScript information I have learned in the boot camp.
@@ -42,6 +38,8 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 
 SO THAT I can gauge my progress compared to my peers
 ```
+
+[Back to Top](#code-quiz)
 
 ### Acceptance Criteria
 
@@ -77,6 +75,12 @@ Use this Coding Quiz as a way to asses your basic knowledge about JavaScript! It
 
 [Back to Top](#code-quiz)
 
+### Visuals
+
+The gif demonstration of my Coding Quiz provides a walkthrough of the quiz's functionality and features. The first visual displays the main page that appears when the web application URL is deployed. The next visual shows how a question page appears within the quiz. The third visual displays the finished page, which allows the quiz-taker to input their initials and save their score to the Leaderboard. Please note that if you run out of time BEFORE ALL QUESTIONS ARE ANSWERED, a different page will display that says "Better luck next time!" You will NOT be able to enter your initials and submit your score to the Leaderboard if time runs out before all questions are answered.
+
+[Back to Top](#code-quiz)
+
 ## Support
 
 If you have any questions, or additional feedback, please feel free to contact me. I will get back to you as soon as possible.
@@ -101,7 +105,9 @@ Here are listed the sources that helped make this project possible.
 
 *The following developers helped create this project:*
 
-[Emily Simone](https://github.com/emsim11) - Main Developer
+- Main Developer: [Emily Simone](https://github.com/emsim11)
+
+[Back to Top](#code-quiz)
 
 ### Acknowledgments
 
@@ -114,3 +120,5 @@ Here are listed the sources that helped make this project possible.
 &copy; 2024 Emily Simone
 
 This application is licensed under the [MIT License](./LICENSE).
+
+[Back to Top](#code-quiz)
